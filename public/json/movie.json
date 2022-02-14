@@ -1,0 +1,25 @@
+{
+  "filmId": 468373,
+  "nameRu": "Анчартед: На картах не значится",
+  "nameEn": "Uncharted",
+  "year": "2022",
+  "filmLength": "01:55",
+  "countries": [
+    {
+      "country": "США"
+    }
+  ],
+  "genres": [
+    {
+      "genre": "приключения"
+    },
+    {
+      "genre": "боевик"
+    }
+  ],
+  "rating": "9.6",
+  "ratingVoteCount": 266,
+  "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/468373.jpg",
+  "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/468373.jpg",
+  "ratingChange": null
+}
