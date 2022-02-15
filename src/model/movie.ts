@@ -7,5 +7,5 @@ export interface Movie {
     posterUrlPreview: string;
     films: [];
     rating:number;
-    url:string
+    url:string;
 }

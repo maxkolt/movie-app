@@ -1,5 +1,6 @@
 import {Movie} from "../model/movie";
 import {createMovieCardsHtml} from "../html-creator/cardHtml";
+import {getAllMovie} from "../service/movieService";
 
 export function showAllCardsMovie(data: Movie) {
     console.log('Добавляю карточки с фильмами в блок')
@@ -23,21 +24,5 @@ export function getClassByRating(voice: any): string {
     }
 }
 
-
-const apiUrlSearch: string = 'https://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-keyword?keyword='
-
-const form: HTMLFormElement = document.querySelector('#formInput')!
-const searchInput: HTMLInputElement = document.querySelector('.form-control')!
-form.addEventListener('submit',
-    (event: SubmitEvent) => {
-        event.preventDefault();
-
-        const apiSearchFilm: string = `${apiUrlSearch}${searchInput.value}`
-        if (searchInput.value) {
-            searchInput.value = '';
-        }
-    })
-
-const btnSearch: HTMLButtonElement = document.querySelector('button')!
 
 
