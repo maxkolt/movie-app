@@ -2,7 +2,7 @@ import {Response} from "../model/response";
 import {Film} from "../model/film";
 import {FilmHtmlCreator} from "../html-creator/film-html-creator";
 
-export class MoviesService {
+export class FilmsService {
     apiKey: string = '205d1e46-6a65-44bc-8872-8c5e1ec5b463'
 
     async getAndShowAllFilms(pageNumber: number = 1) {

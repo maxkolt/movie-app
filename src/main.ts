@@ -1,8 +1,8 @@
 import './assets/main.scss';
-import {MoviesService} from './service/moviesService';
+import {FilmsService} from './service/filmsService';
 import {findAllFilms} from "./listeners/listeners";
 
-const moviesService:MoviesService = new MoviesService()
+const moviesService:FilmsService = new FilmsService()
 await moviesService.getAndShowAllFilms(1)
 
 
