@@ -1,9 +1,10 @@
 import './assets/main.scss';
-import {MovieService} from './service/movieService';
+import {MoviesService} from './service/moviesService';
 import {findAllFilms} from "./listeners/listeners";
 
-const movieService:MovieService = new MovieService()
-await movieService.getAllMovie(1)
+const moviesService:MoviesService = new MoviesService()
+await moviesService.getAllMovie(1)
+
 
 //window.addEventListener('load', () => movieService.)
 
@@ -15,13 +16,7 @@ const apiUrlSearch: string = 'https://kinopoiskapiunofficial.tech/api/v2.1/films
 
 form.addEventListener('submit', (event: SubmitEvent) => findAllFilms(event))
 
-//btnSearch.addEventListener('click', findAllFilms()
+//btnSearch.addEventListener('click', findAllFilms())
 
 
-
-
-const apiSearchFilm: string = `${apiUrlSearch}${searchInput.value}`
-if (searchInput.value) {
-    searchInput.value = apiSearchFilm;
-}
 

@@ -4,7 +4,7 @@ import {Film} from "../model/film";
 
 const apiKey: string = '205d1e46-6a65-44bc-8872-8c5e1ec5b463'
 
-export class MovieService {
+export class MoviesService {
     async getAllMovie(pageNumber: number = 1) {
         const domain: string = `https://kinopoiskapiunofficial.tech/api/v2.2`;
         const apiUrlPopular: string = `${domain}/films/top?type=TOP_100_POPULAR_FILMS&page=${pageNumber}`

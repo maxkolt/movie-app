@@ -8,4 +8,5 @@ export interface Film {
     posterUrlPreview: string;
     rating:number;
     url:string;
+
 }
