@@ -3,12 +3,12 @@ import {MoviesService} from './service/moviesService';
 import {findAllFilms} from "./listeners/listeners";
 
 const moviesService:MoviesService = new MoviesService()
-await moviesService.getAllMovie(1)
+await moviesService.getAndShowAllFilms(1)
 
 
 //window.addEventListener('load', () => movieService.)
 
-const form: HTMLFormElement = document.querySelector('#formInput')!
+const form: HTMLFormElement = document.querySelector('#form-input')!
 const searchInput: HTMLInputElement = document.querySelector('.form-control')!
 const btnSearch: HTMLButtonElement = document.querySelector('button')!
 
