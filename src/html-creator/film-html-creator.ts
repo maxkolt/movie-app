@@ -7,7 +7,7 @@ export function createMovieCardsHtml(film: Film): string {
     const genresOnly2: Array<Genre> = genresAll.slice(1, 3);
     const genresFilms: Array<string> = genresOnly2.map(g => g.genre);
 
-    const rating: string = `${getClassByRating(film.rating)}`;
+    const rating: string = getClassByRating(film.rating);
     const resultCardFilms: string = `<div class="movie-inner">
                                         <img class="rounded movie-cover"
                                              src="${film.posterUrlPreview}
@@ -26,15 +26,16 @@ export function createMovieCardsHtml(film: Film): string {
                                                 ${film.rating}
                                             </div>
                                         </div>`
-    console.log('')
+    console.log(`Фильм с названием: ${film.nameRu}, жанром: ${genresFilms} и рейтингом: ${film.rating}`)
     return resultCardFilms
 }
 
-function getClassByRating(voice: any): string {
-    if (voice > 5) {
-        return voice >= 7 ? 'average-green' : 'average-orange';
+function getClassByRating(rating: number): string {
+    const ratingFilm: boolean = rating >= 7;
+    if (rating > 5) {
+        return ratingFilm ? 'average-green' : 'average-orange';
     } else {
-        return voice >= 7 ? 'average-green' : 'average-red';
+        return ratingFilm ? 'average-green' : 'average-red';
     }
 }
 
