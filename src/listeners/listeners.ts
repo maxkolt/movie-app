@@ -1,21 +1,20 @@
 import {Validation} from "../service/validation";
 
-export class ListenerSearch {
-    findAllFilms(event: SubmitEvent) {
-        console.log('🔫 TODO: Тут происходит событие валидации')
-        event.preventDefault()
+export function findAllFilms(event: SubmitEvent) {
+    console.log('🔫 Тут происходит событие валидации')
+    event.preventDefault()
 
-        const btnSearch: HTMLButtonElement = document.querySelector('button')!
-        const input: HTMLInputElement = document.querySelector('#input-text')!
+    const btnSearch: HTMLButtonElement = document.querySelector('button')!
+    const input: HTMLInputElement = document.querySelector('#input-text')!
 
 
-        if (Validation.isInputTextValid()) {
-            btnSearch.disabled = true
-            input.value = ''
-        } else {
-            btnSearch.disabled = false
-            console.log('🔫 TODO: Очищаю данные и дезейблю кнопку')
-        }
+    if (Validation.isInputTextValid()) {
+        btnSearch.disabled = true
+        input.value = ''
+        console.log('🔫 Очищаю данные и дезейблю кнопку')
+    } else {
+        btnSearch.disabled = false
     }
 }
+
 
