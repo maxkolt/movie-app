@@ -12,11 +12,32 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
+        test: /\.(scss)$/,
+        use: [ {
+          // внедрить CSS на страницу
+          loader: 'style-loader'
+        }, {
+          // переводит CSS в модули CommonJS
+          loader: 'css-loader'
+        }, {
+          // Запуск действий postcss
+          loader: 'postcss-loader',
+          options: {
+            // `postcssOptions` необходим для postcss 8.x;
+            // если вы используете postcss 7.x, пропустите ключ
+            postcssOptions: {
+              // плагины postcss, можно экспортировать в postcss.config.js
+              plugins: function () {
+                return [
+                  require('autoprefixer')
+                ];
+              }
+            }
+          }
+        }, {
+          // компилирует Sass в CSS
+          loader: 'sass-loader'
+        } ]
       }
     ],
   },
