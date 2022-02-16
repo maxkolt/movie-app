@@ -3,12 +3,12 @@ import {Film} from "../model/film";
 
 export class FilmHtmlCreator {
     createMovieCardsHtml(film: Film): string {
-        console.log(`Добавляю фильм в HTML c ID = ${film.filmId}`)
+        console.log(`Добавляю фильм в HTML c ID = ${film.filmId}`);
         const genresAll: Array<Genre> = film.genres;
         const genresOnly2: Array<Genre> = genresAll.slice(1, 3);
         const genresFilms: Array<string> = genresOnly2.map(g => g.genre);
 
-        const rating: string = this.getClassByRating(film.rating);
+        const rating: string = FilmHtmlCreator.getClassByRating(film.rating);
         const resultCardFilms: string = `<div class="movie">
                                           <div class="movie-inner">
                                             <img class="rounded movie-cover"
@@ -43,7 +43,7 @@ export class FilmHtmlCreator {
         })
     }
 
-    private getClassByRating(rating: number): string {
+    private static getClassByRating(rating: number): string {
         const ratingFilm: boolean = rating >= 7;
         if (rating > 5) {
             return ratingFilm ? 'average-green' : 'average-orange';

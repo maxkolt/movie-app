@@ -1,5 +1,5 @@
 import './assets/main.scss';
-import {FilmsService} from './service/filmsService';
+import {FilmsService} from './service/films-service';
 import {Validation} from "./service/validation";
 import {ListenerSearch} from "./listeners/listeners";
 

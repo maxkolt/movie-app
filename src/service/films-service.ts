@@ -29,7 +29,6 @@ export class FilmsService {
         return films;
     }
 
-
     async getSearchFilms() {
         const domain2: string = 'https://kinopoiskapiunofficial.tech/api/v2.1';
         const input: HTMLInputElement = document.querySelector('#input-text')!
